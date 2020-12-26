@@ -6,22 +6,24 @@
 // выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
 
 
-// const user = {
-//   name: 'Mango',
-//   age: 20,
-//   hobby: 'html',
-//   premium: true,
-// };
+const user = {
+  name: 'Mango',
+  age: 20,
+  hobby: 'html',
+  premium: true,
+};
 
-// user.mood = 'happy';
+user.mood = 'happy';
 
+user.hobby = 'skydiving';
 
-// const keys = Object.keys(user); // ["name", "age", "hobby"]
+user.premium = false;
 
-// for (const key of keys) {
+console.log(user);
 
-//   console.log('Value: ', hotel[key]);
-// // hotel.address = '1, Beach ave.';
-// // hotel['manager'] = 'Chuck Norris';
+const keys = Object.keys(user);
 
-// console.log(user)
+for (const key of keys) {
+    const message = `${key}: ${user[key]}`;
+    console.log(message);
+};
