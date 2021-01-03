@@ -13,7 +13,7 @@ const products = [
     for(const product of allProdcuts) {
       // console.log(product);
       if (product.name === productName) {
-        let sum = product.price * product.quantity;
+        const sum = product.price * product.quantity;
         return sum;
       }
     };
