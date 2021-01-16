@@ -1,13 +1,6 @@
 const findBestEmployee = function(employees) {
-    const values = Object.values(employees);
-    let maxValue = values[0];
-    console.log(values);
+  return Object.entries(employees).sort((a, b) => b[1] - a[1])[0][0];
 
-    for(let i = 1; i < values.length; i += 1) {
-     if(values[i] > maxValue)
-     maxValue = values[i];
-    }
-    return maxValue;
   };
   
 
